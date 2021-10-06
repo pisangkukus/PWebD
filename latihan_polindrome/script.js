@@ -14,26 +14,11 @@ function nearestPolindrome(number) {
   return number;
 }
 
-console.log(nearestPolindrome(148));
-console.log(nearestPolindrome(100));
-console.log(nearestPolindrome(1742));
-
-function isNumberKey(evt) {
-  let charCode = evt.which ? evt.which : event.keyCode;
-  if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
-  return true;
-}
-
-let userInput = document.querySelector("userNumber").val();
-var inputVal = "";
-if (userInput) {
-  inputVal = userInput.value;
-}
-let hasil = nearestPolindrome(2365236);
-console.log(hasil);
 // document.querySelector("hasil").value = hasil;
 
-const search = document.querySelector("search");
-function output() {
-  alert(hasil);
+function execute() {
+  let numberInput = prompt("Enter number");
+  if (numberInput != null) {
+    document.getElementById("demo").innerHTML = "Nearest palindrome number from " + numberInput + " is " + nearestPolindrome(numberInput);
+  }
 }
